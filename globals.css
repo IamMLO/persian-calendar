@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("/fonts/Vazirmatn-Variable.woff2") format("woff2 supports variations"),
+    url("/fonts/Vazirmatn-Variable.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* شب کاشی‌کاری: سرمه‌ای تیره + فیروزه‌ای مینا + زعفرانی به‌عنوان تاکید */
+  --bg: #0e1420;
+  --panel: #141c2c;
+  --panel-2: #1b2536;
+  --border: #263248;
+  --text: #eef1f7;
+  --text-dim: #8b96ac;
+  --accent: #1fb6a8;
+  --accent-2: #e3a53f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2f42;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.card-color-violet {
+  background: linear-gradient(135deg, #8b7cf0, #6857d6);
+}
+.card-color-blue {
+  background: linear-gradient(135deg, #3f8fd9, #2d6bb8);
+}
+.card-color-green {
+  background: linear-gradient(135deg, #22b8a0, #178c7c);
+}
+.card-color-orange {
+  background: linear-gradient(135deg, #e3a53f, #c9822a);
+}
+.card-color-pink {
+  background: linear-gradient(135deg, #e2679a, #c14a7c);
+}
+.card-color-red {
+  background: linear-gradient(135deg, #e0645f, #c23f3a);
+}
+
+/* نوار تزئینی الهام‌گرفته از نقش کاشی‌کاری سنتی، زیر هدر اصلی */
+.tile-divider {
+  height: 3px;
+  background-image: linear-gradient(
+    135deg,
+    var(--accent) 25%,
+    transparent 25%,
+    transparent 50%,
+    var(--accent) 50%,
+    var(--accent) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 10px 10px;
+  opacity: 0.55;
+}
